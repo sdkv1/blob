@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA App</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192x192.png">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        h1 { color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di PWA!</h1>
+    <p>Ini adalah aplikasi PWA yang bisa diakses dari shortcut di HP.</p>
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(function(reg) {
+            console.log("Service Worker terdaftar!", reg);
+        }).catch(function(err) {
+            console.log("Service Worker gagal terdaftar!", err);
+        });
+    }
+</script>
+</html>
