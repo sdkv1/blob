@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Responsif</title>
+    <style>
+        /* Menentukan bahwa body dan html mengisi penuh layar */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Wrapper untuk menjaga rasio iframe */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Rasio 16:9 */
+            height: 0;
+            overflow: hidden;
+            background: #ccc;
+        }
+
+        /* Iframe dalam kontainer */
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframe Responsif 16:9</h1>
+
+    <div class="iframe-container">
+        <!-- Iframe -->
+        <iframe src="https://www.example.com" title="Iframe Responsif"></iframe>
+    </div>
+
+</body>
+</html>
