@@ -2,7 +2,7 @@
     "name": "PWA App",
     "short_name": "PWA",
     "description": "Aplikasi Web Progresif untuk shortcut di HP",
-    "start_url": "/index.html",
+    "start_url": "/blob/public/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
